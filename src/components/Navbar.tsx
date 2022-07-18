@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import ThemeToggle from "./ui/ThemeToggle";
 
 interface LinkItemProps {
 	href: string;
@@ -21,10 +22,21 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ path }) => {
 	return (
-		<nav>
-			<LinkItem href="/works" path={path}>
-				Works
+		<nav className="flex justify-between items-center h-10 border-b border-sky-800">
+			<LinkItem href="/" path={path}>
+				Home
 			</LinkItem>
+			<div className="grow flex justify-end gap-10 mr-10">
+				<LinkItem href="/works" path={path}>
+					Works
+				</LinkItem>
+				<LinkItem href="/about" path={path}>
+					About
+				</LinkItem>
+			</div>
+			<div>
+				<ThemeToggle />
+			</div>
 		</nav>
 	);
 };

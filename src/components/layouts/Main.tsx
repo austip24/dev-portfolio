@@ -11,12 +11,12 @@ interface MainProps {
 
 const Main: React.FC<MainProps> = ({ children, router }) => {
 	return (
-		<main className="min-h-screen bg-slate-900 text-slate-50">
+		<main className="min-h-screen dark:bg-slate-900 dark:text-slate-50 bg-slate-50 text-slate-900">
 			<Navbar path={router.asPath} />
 
-      <motion.div
-        key={router.route}
-				initial={{ y: 50, opacity: 0 }}
+			<motion.div
+				key={router.route}
+				initial={{ y: 30, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 1 }}
 			>
