@@ -1,22 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { SunIcon, MoonIcon } from "@heroicons/react/solid";
 
 const ThemeToggle = () => {
 	const { theme, setTheme } = useTheme();
-	const isDark = theme === "dark";
+	const [isDark, setIsDark] = useState<boolean>();
 
-	console.log("theme toggle rendered");
+	useEffect(() => {
+		setIsDark(theme === "dark");
+	}, [theme]);
 
 	const toggleTheme = () => {
 		setTheme(isDark ? "light" : "dark");
 	};
 
-	// TODO: implement button animation on theme change
-
-	return <button onClick={toggleTheme}>ToggleDarkMode</button>;
+	return (
+		<AnimatePresence exitBeforeEnter initial={false}>
+			<motion.button
+				key={theme}
+				className="p-2 bg-indigo-900 dark:bg-amber-300 rounded-lg"
+				onClick={toggleTheme}
+				initial={{ y: -10, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }}
+				exit={{ y: 10, opacity: 0 }}
+				transition={{ duration: 0.2 }}
+			>
+				{isDark ? (
+					<SunIcon className="h-4 w-4 fill-slate-900" />
+				) : (
+					<MoonIcon className="h-4 w-4 fill-slate-100" />
+				)}
+			</motion.button>
+		</AnimatePresence>
+	);
 };
 
-const MemoizedThemeToggle = React.memo(ThemeToggle);
-
-export default MemoizedThemeToggle;
+export default ThemeToggle;

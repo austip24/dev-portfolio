@@ -22,7 +22,7 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
 				<meta name="og:type" content="website" />
 				<title>Austin Pierson - Homepage</title> */}
 			</Head>
-			<section className="w-full max-w-4xl mx-4">
+			<div className="w-full max-w-4xl mx-4">
 				<Navbar path={router.asPath} />
 
 				<AnimatePresence exitBeforeEnter>
@@ -37,7 +37,7 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
 						<Footer />
 					</motion.div>
 				</AnimatePresence>
-			</section>
+			</div>
 		</main>
 	);
 };
