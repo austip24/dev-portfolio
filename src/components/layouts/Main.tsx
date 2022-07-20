@@ -15,12 +15,12 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
 		<main className="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-50 flex justify-center">
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<meta name="description" content="Austin's homepage" />
+				{/* <meta name="description" content="Austin's homepage" />
 				<meta name="author" content="Austin Pierson" />
 				<meta name="og:site_name" content="Austin Pierson" />
 				<meta name="og:title" content="Austin Pierson" />
 				<meta name="og:type" content="website" />
-				<title>Austin Pierson - Homepage</title>
+				<title>Austin Pierson - Homepage</title> */}
 			</Head>
 			<section className="w-full max-w-4xl mx-4">
 				<Navbar path={router.asPath} />
