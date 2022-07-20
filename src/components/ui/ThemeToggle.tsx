@@ -6,7 +6,7 @@ const ThemeToggle = () => {
 	const { theme, setTheme } = useTheme();
 	const isDark = theme === "dark";
 
-	console.log(theme);
+	console.log("theme toggle rendered");
 
 	const toggleTheme = () => {
 		setTheme(isDark ? "light" : "dark");
@@ -17,4 +17,6 @@ const ThemeToggle = () => {
 	return <button onClick={toggleTheme}>ToggleDarkMode</button>;
 };
 
-export default ThemeToggle;
+const MemoizedThemeToggle = React.memo(ThemeToggle);
+
+export default MemoizedThemeToggle;
