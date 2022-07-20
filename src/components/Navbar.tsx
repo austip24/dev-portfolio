@@ -10,7 +10,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ path }) => {
 	return (
-		<nav className="flex justify-between items-center h-12 mb-4 font-semibold">
+		<nav className="flex justify-between items-center h-12 mb-4 font-semibold backdrop-blur-sm sticky top-0">
 			<Link href="/">
 				Home
 			</Link>

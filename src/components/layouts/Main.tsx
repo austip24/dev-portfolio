@@ -25,7 +25,14 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
 			<div className="w-full max-w-4xl mx-4">
 				<Navbar path={router.asPath} />
 
-				<AnimatePresence exitBeforeEnter>
+				<AnimatePresence
+					exitBeforeEnter
+					onExitComplete={() => {
+						if (typeof window !== "undefined") {
+							window.scrollTo({ top: 0 });
+						}
+					}}
+				>
 					<motion.div
 						key={router.route}
 						initial={{ y: 15, opacity: 0 }}
