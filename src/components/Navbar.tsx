@@ -50,26 +50,26 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 							leaveFrom="transform opacity-100 scale-100"
 							leaveTo="transform opacity-0 scale-75"
 						>
-							<Popover.Panel className="absolute right-0 w-40 mt-2 p-2 flex flex-col gap-1 rounded-lg border bg-slate-50 dark:bg-slate-800 border-slate-500 shadow-lg dark:shadow-slate-800">
+							<Popover.Panel className="absolute right-0 w-40 mt-2 p-2 flex flex-col gap-1 rounded-lg border bg-slate-50 dark:bg-slate-800 border-slate-500 shadow-lg shadow-slate-500 dark:shadow-slate-800">
 								{({ close }) => (
 									<>
 										<MenuLink
 											href="/works"
-											className="w-full text-left px-2 py-1 rounded-lg hover:bg-slate-200 dark:hover:bg-sky-800 transition-color duration-200"
+											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600  dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
 										>
 											Works
 										</MenuLink>
 										<MenuLink
 											href="/about"
-											className="w-full text-left px-2 py-1 rounded-lg hover:bg-slate-200 dark:hover:bg-sky-800 transition-color duration-200"
+											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600 dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
 										>
 											About
 										</MenuLink>
 										<MenuLink
 											href="https://github.com/austip24/dev-portfolio"
-											className="w-full text-left px-2 py-1 rounded-lg hover:bg-slate-200 dark:hover:bg-sky-800 transition-color duration-200"
+											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600 dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
 										>
 											<div className="flex gap-1 items-center">
