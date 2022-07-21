@@ -41,10 +41,10 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
 						transition={{ duration: 0.3 }}
 					>
 						{children}
-						<Footer />
 					</motion.div>
 				</AnimatePresence>
 			</div>
+			<Footer />
 		</main>
 	);
 };
