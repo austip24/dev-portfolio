@@ -18,7 +18,7 @@ const LinkItem = forwardRef<HTMLAnchorElement, LinkItemProps>((props, ref) => {
 				className={`${
 					active &&
 					"bg-sky-600 text-slate-100 hover:bg-sky-700 dark:bg-sky-800 dark:text-slate-50 dark:hover:bg-sky-900"
-				} rounded group relative px-2 py-1 transition-color duration-300`}
+				} rounded group relative px-2 py-1 transition-color duration-200`}
 				{...rest}
 			>
 				{children}

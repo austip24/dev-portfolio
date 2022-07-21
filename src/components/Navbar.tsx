@@ -13,8 +13,8 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ path }) => {
 	return (
-		<nav className="bg-white shadow-md dark:bg-slate-900 dark:shadow-none w-screen mb-4 flex justify-center">
-			<div className="flex justify-between items-center h-12 font-semibold backdrop-blur-sm sticky top-0 w-full max-w-4xl px-4 text-sm">
+		<nav className="shadow-md dark:shadow-none w-screen mb-4 flex justify-center backdrop-blur-sm transition-colors duration-200">
+			<div className="flex justify-between items-center h-12 font-semibold sticky top-0 w-full max-w-4xl px-4 text-sm">
 				<Link href="/">
 					<a className="tracking-tighter">Austin Pierson</a>
 				</Link>
@@ -22,8 +22,8 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 					<LinkItem href="/works" path={path}>
 						Works
 					</LinkItem>
-					<LinkItem href="/about" path={path}>
-						About
+					<LinkItem href="/contact" path={path}>
+						Contact
 					</LinkItem>
 					<LinkItem
 						href="https://github.com/austip24/dev-portfolio"
@@ -61,11 +61,11 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 											Works
 										</MenuLink>
 										<MenuLink
-											href="/about"
+											href="/contact"
 											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600 dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
 										>
-											About
+											Contact
 										</MenuLink>
 										<MenuLink
 											href="https://github.com/austip24/dev-portfolio"
