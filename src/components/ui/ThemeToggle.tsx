@@ -19,7 +19,7 @@ const ThemeToggle = () => {
 		<AnimatePresence exitBeforeEnter initial={false}>
 			<motion.button
 				key={theme}
-				className="p-2 bg-indigo-900 dark:bg-amber-300 rounded-lg"
+				className="p-2 bg-indigo-900 hover:bg-indigo-800 dark:bg-amber-300 dark:hover:bg-amber-400 rounded-lg transition-colors duration-200"
 				onClick={toggleTheme}
 				initial={{ y: -10, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
