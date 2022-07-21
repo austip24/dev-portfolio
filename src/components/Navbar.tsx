@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 				<Link href="/">
 					<a className="tracking-tighter">Austin Pierson</a>
 				</Link>
-				<div className="hidden md:flex grow justify-center gap-10 ml-20">
+				<div className="hidden md:flex grow justify-center items-center gap-10">
 					<LinkItem href="/works" path={path}>
 						Works
 					</LinkItem>
@@ -43,12 +43,12 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 						</Popover.Button>
 						<Transition
 							as={React.Fragment}
-							enter="transition ease-out duration-100"
-							enterFrom="transform opacity-0 scale-95"
+							enter="transition ease-out duration-75 origin-top-right"
+							enterFrom="transform opacity-0 scale-75"
 							enterTo="transform opacity-100 scale-100"
-							leave="transition ease-in duration-100"
+							leave="transition ease-in duration-75 origin-top-right"
 							leaveFrom="transform opacity-100 scale-100"
-							leaveTo="transform opacity-0 scale-95"
+							leaveTo="transform opacity-0 scale-75"
 						>
 							<Popover.Panel className="absolute right-0 w-40 mt-2 p-2 flex flex-col gap-1 rounded-lg border bg-slate-50 dark:bg-slate-800 border-slate-500 shadow-lg dark:shadow-slate-800">
 								{({ close }) => (
