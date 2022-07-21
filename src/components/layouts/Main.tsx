@@ -12,7 +12,8 @@ interface MainProps {
 
 const Main: React.FC<MainProps> = ({ children, router }) => {
 	return (
-		<main className="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-50 flex items-center flex-col">
+		<main className="min-h-screen bg-slate-100 text-slate-900 dark:bg-slate-900 dark:text-slate-50 flex items-center flex-col"
+		>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{/* <meta name="description" content="Austin's homepage" />
@@ -27,6 +28,7 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
 			<div className="w-full max-w-4xl mx-4">
 				<AnimatePresence
 					exitBeforeEnter
+					initial={false}
 					onExitComplete={() => {
 						if (typeof window !== "undefined") {
 							window.scrollTo({ top: 0 });
