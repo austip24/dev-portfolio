@@ -8,8 +8,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'main-dark': 'url("/imgs/background-dark.svg")',
-				'main-light': 'url("/imgs/background-light.svg")',
+				'main-dark': 'url("/imgs/backgrounds/dark.svg")',
+				'main-light': 'url("/imgs/backgrounds/light.svg")',
 			},
 		},
 	},
