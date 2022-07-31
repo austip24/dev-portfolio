@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 
 const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
 	return (
-		<ThemeProvider attribute="class">
+		<ThemeProvider attribute="class" defaultTheme="dark">
 			<Layout router={router}>
 				<Component {...pageProps} />
 			</Layout>
