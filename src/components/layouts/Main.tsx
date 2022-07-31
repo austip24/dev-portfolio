@@ -12,7 +12,7 @@ interface MainProps {
 
 const Main: React.FC<MainProps> = ({ children, router }) => {
 	return (
-		<main className="relative min-h-screen bg-no-repeat bg-cover bg-center bg-main-light text-slate-900 dark:bg-main-dark dark:text-slate-50 flex items-center flex-col transition-colors duration-200">
+		<main className="relative min-h-screen bg-no-repeat bg-cover bg-center bg-main-light text-slate-900 dark:bg-main-dark dark:text-slate-50 flex items-center flex-col">
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{/* <meta name="description" content="Austin's homepage" />

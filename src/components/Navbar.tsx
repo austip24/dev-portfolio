@@ -13,7 +13,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ path }) => {
 	return (
-		<nav className="shadow-md dark:shadow-none w-screen flex justify-center backdrop-blur-sm transition-colors duration-200 z-50">
+		<nav className="shadow-md dark:shadow-none w-screen flex justify-center backdrop-blur-sm z-50">
 			<div className="flex justify-between items-center h-12 font-semibold sticky top-0 w-full max-w-4xl px-4 text-sm">
 				<Link href="/">
 					<a className="tracking-tighter">Austin Pierson</a>
@@ -35,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 				<div className="flex items-center justify-center gap-4">
 					<ThemeToggle />
 					<Popover className="md:hidden relative">
-						<Popover.Button className="hover:bg-slate-50 hover:border-slate-700 hover:dark:bg-slate-800 hover:dark:border-slate-400 rounded-lg p-2 border border-slate-500 transition duration-200">
+						<Popover.Button className="hover:bg-slate-50 hover:border-slate-700 hover:dark:bg-slate-800 hover:dark:border-slate-400 rounded-lg p-2 border border-slate-500">
 							<MenuIcon className="h-4 w-4 fill-current" />
 						</Popover.Button>
 						<Transition
