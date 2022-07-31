@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 			</div>
 			<div className="relative w-52 sm:w-64 md:w-72 aspect-square rounded-full overflow-hidden outline outline-offset-4 outline-current backdrop-blur-sm">
 				<Image
-					className="md:translate-y-1"
+					className="md:translate-y-1 select-none"
 					src="/imgs/profile_pic.png"
 					alt="Profile Pic"
 					layout="fill"
