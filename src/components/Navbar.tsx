@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ThemeToggle from "./ui/ThemeToggle";
-import LinkItem from "./ui/LinkItem";
-import MenuLink from "./ui/MenuLink";
+import NavLink from "./ui/NavLink";
+import PopoverLink from "./ui/PopoverLink";
 import Link from "next/link";
 import Github from "./icons/Github";
-import { Menu, Transition, Popover } from "@headlessui/react";
+import { Transition, Popover } from "@headlessui/react";
 import { MenuIcon } from "@heroicons/react/solid";
 
 interface NavbarProps {
@@ -19,21 +19,18 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 					<a className="tracking-tighter">Austin Pierson</a>
 				</Link>
 				<div className="hidden md:flex grow justify-center items-center gap-10">
-					<LinkItem href="/works" path={path}>
+					<NavLink href="/works" path={path}>
 						Works
-					</LinkItem>
-					<LinkItem href="/contact" path={path}>
+					</NavLink>
+					<NavLink href="/contact" path={path}>
 						Contact
-					</LinkItem>
-					<LinkItem
-						href="https://github.com/austip24/dev-portfolio"
-						path={path}
-					>
+					</NavLink>
+					<NavLink href="https://github.com/austip24/dev-portfolio" path={path}>
 						<div className="flex gap-1 items-center justify-center">
 							<Github />
 							Source
 						</div>
-					</LinkItem>
+					</NavLink>
 				</div>
 				<div className="flex items-center justify-center gap-4">
 					<ThemeToggle />
@@ -53,21 +50,21 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 							<Popover.Panel className="absolute right-0 w-40 mt-2 p-2 flex flex-col gap-1 rounded-lg border bg-slate-50 dark:bg-slate-800 border-slate-500 shadow-lg shadow-slate-500 dark:shadow-slate-800">
 								{({ close }) => (
 									<>
-										<MenuLink
+										<PopoverLink
 											href="/works"
 											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600  dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
 										>
 											Works
-										</MenuLink>
-										<MenuLink
+										</PopoverLink>
+										<PopoverLink
 											href="/contact"
 											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600 dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
 										>
 											Contact
-										</MenuLink>
-										<MenuLink
+										</PopoverLink>
+										<PopoverLink
 											href="https://github.com/austip24/dev-portfolio"
 											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600 dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
@@ -76,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 												<Github />
 												Source
 											</div>
-										</MenuLink>
+										</PopoverLink>
 									</>
 								)}
 							</Popover.Panel>

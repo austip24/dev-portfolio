@@ -1,13 +1,13 @@
 import React, { forwardRef } from "react";
 import Link from "next/link";
 
-interface LinkItemProps {
+interface NavLinkProps {
 	href: string;
 	path?: string;
 	children: React.ReactNode;
 }
 
-const LinkItem = forwardRef<HTMLAnchorElement, LinkItemProps>((props, ref) => {
+const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>((props, ref) => {
 	const { href, path, children, ...rest } = props;
 	const active = path?.startsWith(href);
 
@@ -37,6 +37,6 @@ const LinkItem = forwardRef<HTMLAnchorElement, LinkItemProps>((props, ref) => {
 	);
 });
 
-LinkItem.displayName = "LinkItem";
+NavLink.displayName = "NavLink";
 
-export default LinkItem;
+export default NavLink;
