@@ -15,9 +15,9 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 	return (
 		<nav className="shadow-md dark:shadow-none w-screen flex justify-center backdrop-blur-sm z-50">
 			<div className="flex justify-between items-center h-12 font-semibold sticky top-0 w-full max-w-4xl px-4 text-sm">
-				<Link href="/">
-					<a className="tracking-tighter">Austin Pierson</a>
-				</Link>
+				<NavLink href="/" path={path}>
+					Austin Pierson
+				</NavLink>
 				<div className="hidden md:flex grow justify-center items-center gap-10">
 					<NavLink href="/works" path={path}>
 						Works
