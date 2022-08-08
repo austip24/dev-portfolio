@@ -7,7 +7,7 @@ import Link from "next/link";
 const Home: NextPage = () => {
 	return (
 		<div className="gap-4 md:gap-10 md:flex-row flex flex-col-reverse items-center justify-around">
-			<div className="flex flex-col items-center justify-center gap-4 md:items-start">
+			<div className="flex flex-col items-center justify-center gap-4 md:gap-5 lg:gap-6 md:items-start">
 				<div className="tracking-tight md:flex md:flex-col md:gap-1 text-2xl md:text-4xl lg:text-5xl font-bold">
 					<h1 className="inline md:block">Hi, </h1>
 					<h1 className="inline md:block">
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
 									width: 0,
 								}}
 								animate={{ width: "100%" }}
-								transition={{ duration: 0.5, delay: 0.55, type: 'spring' }}
+								transition={{ duration: 0.5, delay: 0.55, type: "spring" }}
 							></motion.span>
 						</span>
 						,{" "}
@@ -28,14 +28,14 @@ const Home: NextPage = () => {
 					<h1 className="inline md:block">a web developer</h1>
 				</div>
 				<motion.div
-					className="flex gap-4"
+					className="flex gap-4 md:gap-6 lg:gap-8"
 					initial={{ y: 20, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ duration: 0.6, delay: 1.05 }}
 				>
 					<Button>
 						<Link href="/about">
-							<span className="flex gap-2">
+							<span className="flex gap-2 h-full w-full px-4 py-2">
 								About{" "}
 								<div className="group-hover:translate-x-1 transition duration-150">
 									&gt;
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 					</Button>
 					<Button>
 						<Link href="/works">
-							<span className="flex gap-2">
+							<span className="flex gap-2 px-4 py-2">
 								Works{" "}
 								<div className="group-hover:translate-x-1 transition duration-150">
 									&gt;

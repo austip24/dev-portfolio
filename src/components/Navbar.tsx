@@ -19,11 +19,11 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 					<span className="tracking-tighter">Austin Pierson</span>
 				</NavLink>
 				<div className="hidden md:flex grow justify-center items-center gap-10">
+					<NavLink href="/about" path={path}>
+						About
+					</NavLink>
 					<NavLink href="/works" path={path}>
 						Works
-					</NavLink>
-					<NavLink href="/contact" path={path}>
-						Contact
 					</NavLink>
 					<NavLink href="https://github.com/austip24/dev-portfolio" path={path}>
 						<div className="flex gap-1 items-center justify-center">
@@ -51,18 +51,18 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 								{({ close }) => (
 									<>
 										<PopoverLink
+											href="/about"
+											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600 dark:hover:bg-sky-800 transition-color duration-200"
+											onClick={() => close()}
+										>
+											About
+										</PopoverLink>
+										<PopoverLink
 											href="/works"
 											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600  dark:hover:bg-sky-800 transition-color duration-200"
 											onClick={() => close()}
 										>
 											Works
-										</PopoverLink>
-										<PopoverLink
-											href="/contact"
-											className="w-full text-left px-2 py-1 rounded-lg hover:text-slate-50 hover:bg-sky-600 dark:hover:bg-sky-800 transition-color duration-200"
-											onClick={() => close()}
-										>
-											Contact
 										</PopoverLink>
 										<PopoverLink
 											href="https://github.com/austip24/dev-portfolio"
