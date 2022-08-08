@@ -10,13 +10,12 @@ interface PageContentProps {
 const PageContent: React.FC<PageContentProps> = ({ children, router }) => {
 	return (
 		<motion.div
-			className="w-full max-w-5xl mx-4 dark:text-slate-200"
+			className="w-full max-w-5xl mx-4 dark:text-slate-200 py-4 px-6 lg:px-10"
 			initial={{ y: 30, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
-			transition={{ duration: 0.8 }}
+			transition={{ duration: 0.6 }}
 		>
 			<AnimatePresence
-				initial={false}
 				exitBeforeEnter
 				onExitComplete={() => {
 					if (typeof window !== "undefined") {
@@ -26,7 +25,6 @@ const PageContent: React.FC<PageContentProps> = ({ children, router }) => {
 			>
 				<motion.div
 					key={router.route}
-					className="p-4"
 					initial={{ y: 15, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					exit={{ y: 15, opacity: 0 }}
