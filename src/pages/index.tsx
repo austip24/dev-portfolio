@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
 	return (
-		<div className="gap-8 md:flex-row flex flex-col-reverse items-center justify-around mt-12">
+		<section className="gap-8 md:flex-row flex flex-col-reverse items-center justify-around mt-12">
 			<div className="flex flex-col items-center justify-center gap-8 md:items-start">
 				<div className="tracking-tight md:flex md:flex-col md:gap-1 text-2xl md:text-4xl lg:text-5xl font-bold">
 					<h1 className="inline md:block">Hi, </h1>
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
 					objectFit="cover"
 				/>
 			</div>
-		</div>
+		</section>
 	);
 };
 
