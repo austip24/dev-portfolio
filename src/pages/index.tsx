@@ -20,7 +20,13 @@ const Home: NextPage = () => {
 									width: 0,
 								}}
 								animate={{ width: "100%" }}
-								transition={{ duration: 1.05, delay: 0.55, type: 'spring', bounce: 0.1, damping: 10 }}
+								transition={{
+									duration: 1.05,
+									delay: 0.55,
+									type: "spring",
+									bounce: 0.1,
+									damping: 10,
+								}}
 							></motion.span>
 						</span>
 						,{" "}
