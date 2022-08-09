@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
 	return (
-		<section className="gap-8 md:flex-row flex flex-col-reverse items-center justify-around mt-12">
-			<div className="flex flex-col items-center justify-center gap-8 md:items-start">
+		<div className="gap-8 md:flex-row flex flex-col-reverse items-center justify-around mt-12">
+			<section className="flex flex-col items-center justify-center gap-8 md:items-start">
 				<div className="tracking-tight md:flex md:flex-col md:gap-1 text-2xl md:text-4xl lg:text-5xl font-bold">
 					<h1 className="inline md:block">Hi, </h1>
 					<h1 className="inline md:block">
@@ -61,8 +61,8 @@ const Home: NextPage = () => {
 						</Button>
 					</div>
 				</motion.div>
-			</div>
-			<div className="relative w-52 sm:w-64 md:w-72 aspect-square rounded-full overflow-hidden outline outline-offset-4 outline-current bg-sky-600/40 dark:bg-sky-500/30">
+			</section>
+			<section className="relative w-52 sm:w-64 md:w-72 aspect-square rounded-full overflow-hidden outline outline-offset-4 outline-current bg-sky-600/40 dark:bg-sky-500/30">
 				<Image
 					className="select-none"
 					src="/imgs/profile.png"
@@ -70,8 +70,8 @@ const Home: NextPage = () => {
 					layout="fill"
 					objectFit="cover"
 				/>
-			</div>
-		</section>
+			</section>
+		</div>
 	);
 };
 
