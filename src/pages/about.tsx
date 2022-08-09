@@ -1,6 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Section from "../components/layouts/Section";
+import Book from "../components/icons/Book";
 
 const About: NextPage = () => {
 	return (
@@ -14,9 +15,11 @@ const About: NextPage = () => {
 						I am a full-stack web developer based in Arizona. I have a passion
 						for building web applications that are user-friendly, performant,
 						and accessible. Some of my hobbies include playing the guitar,
-						reading fiction (I especially enjoy fantasy), and listening to
-						music.
+						reading fiction, and listening to music.
 					</p>
+					<div>
+						<Book className='w-44'/>
+					</div>
 				</div>
 			</Section>
 			<Section>

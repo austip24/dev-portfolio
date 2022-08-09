@@ -1,6 +1,7 @@
 import React from "react";
+import type { SVGIconProps } from "../../types";
 
-const Github: React.FC = (props) => {
+const Github: React.FC<SVGIconProps> = (props) => {
 	return (
 		<svg
 			className="w-5 h-5"
