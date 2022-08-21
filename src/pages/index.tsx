@@ -8,7 +8,7 @@ const Home: NextPage = () => {
 	return (
 		<div className="gap-8 md:flex-row flex flex-col-reverse items-center justify-around mt-12">
 			<section className="flex flex-col items-center justify-center gap-8 md:items-start">
-				<div className="tracking-tight md:flex md:flex-col md:gap-1 text-2xl md:text-4xl lg:text-5xl font-bold">
+				<div className="tracking-tight md:flex md:flex-col md:gap-1 text-2xl md:text-4xl lg:text-5xl font-bold text-center md:text-start">
 					<h1 className="inline md:block">Hi, </h1>
 					<h1 className="inline md:block">
 						I&apos;m{" "}
