@@ -13,7 +13,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ path }) => {
 	return (
-		<nav className="shadow-md dark:shadow-none w-full flex justify-center backdrop-blur-sm z-50">
+		<nav className="sticky top-0 shadow-md dark:shadow-none w-full flex justify-center backdrop-blur-sm z-50">
 			<div className="flex justify-between items-center h-12 font-semibold sticky top-0 w-full max-w-4xl px-2 text-sm">
 				<NavLink href="/" path={path}>
 					<span className="tracking-tighter">Austin Pierson</span>
