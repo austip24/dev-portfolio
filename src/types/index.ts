@@ -3,6 +3,7 @@ import React from "react";
 export type SVGIconProps = React.SVGAttributes<SVGSVGElement>;
 
 export interface Work {
+	id: string;
 	title: string;
 	description: string;
 	thumbnailImage: string;
