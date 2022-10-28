@@ -8,14 +8,7 @@ import { useRouter } from "next/router";
 const WorkPage: NextPage = () => {
 	const router = useRouter();
 	const { title } = router.query;
-	const [work, setWork] = useState<Work | null>(null);
-
-	useEffect(() => {
-		const foundWork = works.find((work) => work.title === title);
-		if (foundWork) {
-			setWork(foundWork);
-		}
-	}, [title]);
+	const work = works.find((work) => work.title === title);
 
 	return (
 		<div>

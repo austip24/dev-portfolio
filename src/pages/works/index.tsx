@@ -36,9 +36,7 @@ const Works: NextPage = () => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-4 py-4">
 			{works.map((work, i) => (
-				<>
-					<WorkCard key={i} {...work} />
-				</>
+				<WorkCard key={i} {...work} />
 			))}
 		</div>
 	);
