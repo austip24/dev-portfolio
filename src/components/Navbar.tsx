@@ -2,7 +2,6 @@ import React from "react";
 import ThemeToggle from "./ui/ThemeToggle";
 import NavLink from "./ui/NavLink";
 import PopoverLink from "./ui/PopoverLink";
-import Link from "next/link";
 import Github from "./icons/Github";
 import { Transition, Popover } from "@headlessui/react";
 import { MenuIcon } from "@heroicons/react/solid";
@@ -35,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ path }) => {
 				<div className="flex items-center justify-center gap-4">
 					<ThemeToggle />
 					<Popover className="md:hidden relative">
-						<Popover.Button className="hover:bg-slate-50 hover:border-slate-700 hover:dark:bg-slate-800 hover:dark:border-slate-400 rounded-lg p-2 border border-slate-500">
+						<Popover.Button className="hover:bg-slate-50 hover:border-slate-700 hover:dark:bg-slate-800 hover:dark:border-slate-400 rounded-lg p-2 border border-slate-500" name="Menu">
 							<MenuIcon className="h-4 w-4 fill-current" />
 						</Popover.Button>
 						<Transition

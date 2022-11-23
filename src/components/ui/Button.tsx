@@ -7,7 +7,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
 	return (
 		<button
-			className="flex justify-center items-center gap-2 relative bg-slate-900 dark:bg-sky-500 text-white text-lg hover:bg-opacity-80 dark:hover:bg-opacity-80 rounded-lg group transition duration-150"
+			className="flex justify-center items-center gap-2 relative font-bold bg-slate-900 dark:bg-sky-500 text-white dark:text-slate-900 text-lg hover:bg-opacity-80 dark:hover:bg-opacity-80 rounded-lg group transition duration-150"
 			{...rest}
 		>
 			{children}

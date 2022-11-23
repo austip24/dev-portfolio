@@ -20,8 +20,8 @@ const Main: React.FC<MainProps> = ({ children, router }) => {
 				<meta name="author" content="Austin Pierson" />
 				<meta name="og:site_name" content="Austin Pierson" />
 				<meta name="og:title" content="Austin Pierson" />
-				<meta name="og:type" content="website" />
-				<title>Austin Pierson - Homepage</title> */}
+	<meta name="og:type" content="website" /> */}
+				<title>Austin Pierson - Homepage</title>
 			</Head>
 
 			<Navbar path={router.asPath} />

@@ -25,6 +25,7 @@ const ThemeToggle = () => {
 				animate={{ y: 0, opacity: 1 }}
 				exit={{ y: 10, opacity: 0 }}
 				transition={{ duration: 0.2 }}
+				name="Theme Toggle"
 			>
 				{isDark ? (
 					<SunIcon className="h-4 w-4 fill-slate-900" />
